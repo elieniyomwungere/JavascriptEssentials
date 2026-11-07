@@ -44,6 +44,13 @@ switch(userType){
         userCategory = "Unknown";
 }
 
+//use: ternary operator for isAuthenticated and authenticationStatus
+
+let isAuthenticated = true;
+
+let authenticationStatus = isAuthenticated ? "Authentificated" : "Not authentificated";
+
 console.log("Access Level :", accessLevel);
 console.log("User Message: ",userMessage);
 console.log("User Category: ", userCategory);
+console.log("Authentification Status: ", authenticationStatus);
