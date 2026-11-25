@@ -1,23 +1,44 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Colorful Memory Match Game</title>
-        <link rel="stylesheet" href="./colorfulGame.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A colorful memory card matching game.">
+    <title>Colorful Memory Game</title>
+
+    <link rel="stylesheet" href="colorfulGame.css">
+    <script src="colorful_memory_game.js" defer></script>
 </head>
 
 <body>
-    <h1>Colorful Memory Match Game</h1>
-    <div class="container">
-        <div id="game-container">
-         <!-- Cards will be generated dynamically using JavaScript -->
-        </div>
-        <div class="startMain">
-            <p id="score">Score: 0</p>
-            <p id="timer">Time Left: 30</p>
-            <button id="startbtn">Start/Restart</button>
-        </div>
-    </div>
-    <script src="./colorful_memory_game.js"></script>
+    <main class="game">
+        <header class="game-header">
+            <h1>Colorful Memory Game</h1>
+            <p>Find all matching color pairs!</p>
+        </header>
+
+        <section class="game-panel" aria-label="Game information">
+            <div class="game-info">
+                <p>Score: <span id="score">0</span></p>
+                <p>Time: <span id="timer">30</span>s</p>
+            </div>
+
+            <div
+                id="game-container"
+                class="game-container"
+                aria-label="Memory game cards"
+            ></div>
+
+            <button id="start-button" type="button">
+                Start Game
+            </button>
+
+            <p
+                id="game-status"
+                class="game-status"
+                aria-live="polite"
+            ></p>
+        </section>
+    </main>
 </body>
 </html>
